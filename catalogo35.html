@@ -1,0 +1,341 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Pizzas 30 CM | Pizzaria Sabor de Casa</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<header class="site-header">
+
+    <div class="header-esquerda">
+
+        <div class="menu-navegacao">
+            <button class="botao-menu" type="button"
+                    aria-label="Abrir menu"
+                    onclick="alternarMenu(event)">
+                <i class="fa-solid fa-ellipsis-vertical"></i>
+            </button>
+
+            <div class="menu-dropdown" id="menu-dropdown">
+                <a href="index.html" data-i18n="inicio">
+                    <i class="fa-solid fa-house"></i> Início
+                </a>
+
+                <a href="catalogo30.html" data-i18n="pizza30">
+                    30 CM
+                </a>
+
+                <a href="catalogo35.html" data-i18n="pizza35">
+                    35 CM
+                </a>
+
+                <a href="mini.html" data-i18n="mini">
+                    Mini Pizzas
+                </a>
+
+                <a href="bebidas.html" data-i18n="bebidas">
+                    <i class="fa-solid fa-bottle-water"></i> Bebidas
+                </a>
+
+                <a href="promocoes.html" data-i18n="promocoes">
+                    <i class="fa-solid fa-fire"></i> Promoções
+                </a>
+
+                <div class="menu-separador"></div>
+
+                <div class="menu-opcao">
+                    <i class="fa-solid fa-language"></i>
+                    <label for="seletor-idioma" data-i18n="idioma">Idioma</label>
+                    <select id="seletor-idioma" onchange="alterarIdioma(this.value)">
+                        <option value="pt-BR">Português</option>
+                        <option value="es">Español</option>
+                        <option value="en">English</option>
+                    </select>
+                </div>
+
+                <button class="menu-tema" type="button" onclick="alternarModoNoturno()">
+                    <i class="fa-solid fa-moon" id="icone-tema"></i>
+                    <span id="texto-tema" data-i18n="modoNoturno">Modo noturno</span>
+                </button>
+            </div>
+        </div>
+
+        <button class="carrinho-topo"
+                type="button"
+                onclick="abrirCarrinho()"
+                aria-label="Abrir carrinho">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span id="contador-carrinho" class="contador-carrinho">0</span>
+        </button>
+
+    </div>
+
+    <a class="logo logo-centro" href="index.html" aria-label="Ir para o início">
+        <span class="logo-hover">
+            <img src="imagens/logo.png" alt="Logo da Pizzaria">
+            <span class="logo-tooltip">
+                <strong>Pizzaria Sabor de Casa</strong>
+                <small>Delivery • Clique para ir ao início</small>
+            </span>
+        </span>
+
+        <span class="logo-nome">
+       
+    </a>
+
+</header>
+
+<section class="banner-catalogo">
+
+<h1>GIGANTE 35 CM</h1>
+
+<p>8 FATIAS • ESCOLHA SEU SABOR FAVORITO</p>
+
+</section>
+
+<section class="catalogo-pizzas">
+<div class="catalog-message" role="status">Carregando cardápio...</div>
+</section>
+
+</main>
+
+<footer>
+
+<div class="footer">
+
+<div>
+
+<h3>Pizzaria Sabor de Casa</h3>
+
+<p>As melhores promoções todos os dias.</p>
+
+</div>
+
+<div>
+
+<h3>WhatsApp</h3>
+
+<p>(38) 99160-3575</p>
+
+</div>
+
+<div>
+
+<h3>Funcionamento</h3>
+
+<p>Sexta feira a Domingo</p>
+
+<p>19:00 às 23:00</p>
+
+</div>
+
+<div>
+
+<h3>Instagram</h3>
+
+<a href="#"><i class="fab fa-instagram"></i></a>
+
+</div>
+
+</div>
+
+<div class="copy">
+
+© 2026 Pizzaria Sabor de Casa
+
+</div>
+
+    <p class="acesso-administrativo"><a href="admin/" aria-label="Acessar painel administrativo">🔒 Área administrativa</a></p>
+</footer>
+
+<div id="carrinho" class="carrinho">
+
+    <div class="carrinho-header">
+
+        <h2>🛒 Meu Pedido</h2>
+
+        <button type="button" onclick="fecharCarrinho()">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+    </div>
+
+    <div id="lista-carrinho" class="lista-carrinho">
+
+        <p>Seu carrinho está vazio.</p>
+
+    </div>
+
+    <div class="resumo">
+
+        <div class="linha">
+
+            <span>Total</span>
+
+            <strong id="total">R$ 0,00</strong>
+
+        </div>
+
+    </div>
+
+    <div class="dados">
+
+        <button class="btn-finalizar" onclick="finalizarPedido()">
+
+            <i class="fa-brands fa-whatsapp"></i>
+
+            Finalizar Pedido
+
+        </button>
+
+        <button class="btn-limpar" onclick="limparCarrinho()">
+
+            Limpar Carrinho
+
+        </button>
+
+    </div>
+
+</div>
+</div>
+
+
+<div id="adicionais" class="adicionais">
+
+    <div class="adicionais-caixa">
+
+        <button class="fechar-adicionais" onclick="fecharAdicionais()">
+            ×
+        </button>
+
+        <h2>Adicionais</h2>
+
+        <p>Escolha uma borda para sua pizza:</p>
+
+        <button onclick="adicionarComBorda('sem')">
+            Sem adicional
+        </button>
+
+        <button onclick="adicionarComBorda('catupiry')">
+            Borda Catupiry — R$ 3,00
+        </button>
+
+        <button onclick="adicionarComBorda('cheddar')">
+            Borda Cheddar — R$ 4,00
+        </button>
+
+    </div>
+
+</div>
+
+
+
+
+<div id="janelaPagamento" class="janela-pagamento">
+
+    <div class="caixa-pagamento">
+
+        <button
+            type="button"
+            class="fechar-pagamento"
+            onclick="fecharPagamento()"
+        >
+            ×
+        </button>
+
+        <h2>💳 Forma de Pagamento</h2>
+
+        <p>Como você deseja pagar?</p>
+
+        <div class="opcoes-pagamento">
+
+            <button
+                type="button"
+                onclick="selecionarPagamento('Pix')"
+            >
+                🟢 Pix
+            </button>
+
+            <button
+                type="button"
+                onclick="selecionarPagamento('Dinheiro')"
+            >
+                💵 Dinheiro
+            </button>
+
+            <button
+                type="button"
+                onclick="selecionarPagamento('Cartão de crédito')"
+            >
+                💳 Cartão de crédito
+            </button>
+
+            <button
+                type="button"
+                onclick="selecionarPagamento('Cartão de débito')"
+            >
+                💳 Cartão de débito
+            </button>
+
+        </div>
+
+        <div
+            id="campoTrocoPagamento"
+            class="campo-troco-pagamento"
+            style="display:none;"
+        >
+
+            <label for="valorTroco">
+                Troco para quanto?
+            </label>
+
+            <input
+                type="number"
+                id="valorTroco"
+                placeholder="Ex.: 100"
+                min="0"
+                step="0.01"
+            >
+
+        </div>
+
+        <button
+            type="button"
+            class="btn-confirmar-pagamento"
+            onclick="confirmarPagamento()"
+        >
+            <i class="fa-brands fa-whatsapp"></i>
+            Confirmar e enviar pedido
+        </button>
+
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
+<script src="admin-sync.js" defer></script>
+
+<script src="business-info.js" defer></script>
+</body>
+</html>

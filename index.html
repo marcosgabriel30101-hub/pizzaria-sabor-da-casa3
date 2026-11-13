@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pizzaria Sabor de Casa</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<header class="site-header">
+
+    <div class="header-esquerda">
+
+        <div class="menu-navegacao">
+            <button class="botao-menu" type="button"
+                    aria-label="Abrir menu"
+                    onclick="alternarMenu(event)">
+                <i class="fa-solid fa-ellipsis-vertical"></i>
+            </button>
+
+            <div class="menu-dropdown" id="menu-dropdown">
+                <a href="index.html" data-i18n="inicio">
+                    <i class="fa-solid fa-house"></i> Início
+                </a>
+
+                <a href="catalogo30.html" data-i18n="pizza30">
+                    30 CM
+                </a>
+
+                <a href="catalogo35.html" data-i18n="pizza35">
+                    35 CM
+                </a>
+
+                <a href="mini.html" data-i18n="mini">
+                    Mini Pizzas
+                </a>
+
+                <a href="bebidas.html" data-i18n="bebidas">
+                    <i class="fa-solid fa-bottle-water"></i> Bebidas
+                </a>
+
+                <a href="promocoes.html" data-i18n="promocoes">
+                    <i class="fa-solid fa-fire"></i> Promoções
+                </a>
+
+                <div class="menu-separador"></div>
+
+                <div class="menu-opcao">
+                    <i class="fa-solid fa-language"></i>
+                    <label for="seletor-idioma" data-i18n="idioma">Idioma</label>
+                    <select id="seletor-idioma" onchange="alterarIdioma(this.value)">
+                        <option value="pt-BR">Português</option>
+                        <option value="es">Español</option>
+                        <option value="en">English</option>
+                    </select>
+                </div>
+
+                <button class="menu-tema" type="button" onclick="alternarModoNoturno()">
+                    <i class="fa-solid fa-moon" id="icone-tema"></i>
+                    <span id="texto-tema" data-i18n="modoNoturno">Modo noturno</span>
+                </button>
+            </div>
+        </div>
+
+        <button class="carrinho-topo"
+                type="button"
+                onclick="abrirCarrinho()"
+                aria-label="Abrir carrinho">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span id="contador-carrinho" class="contador-carrinho">0</span>
+        </button>
+
+    </div>
+
+    <a class="logo logo-centro" href="index.html" aria-label="Ir para o início">
+        <span class="logo-hover">
+            <img src="imagens/logo.png" alt="Logo da Pizzaria">
+            <span class="logo-tooltip">
+                <strong>Pizzaria Sabor de Casa</strong>
+                <small>Delivery • Clique para ir ao início</small>
+            </span>
+        </span>
+
+        <span class="logo-nome">
+        
+    </a>
+
+</header>
+
+<section class="banner-catalogo">
+
+    <h1>PIZZARIA SABOR DE CASA</h1>
+
+    <p>Escolha o tamanho da sua pizza</p>
+
+</section>
+
+<section class="catalogo-pizzas">
+
+    <!-- PIZZA 30 -->
+
+    <div class="pizza-card">
+
+        <img src="imagens/pizza30.png" alt="Pizza 30cm">
+
+        <div class="pizza-info">
+
+            <h2>GRANDE 30 CM</h2>
+
+            <p>6 fatias • Mais pizza, mais sabor, mais momentos juntos!.</p>
+
+            <button onclick="window.location.href='catalogo30.html'">
+
+                VER PIZZAS
+
+            </button>
+
+        </div>
+
+    </div>
+
+ 
+<div class="pizza-card">
+
+    <img src="imagens/bebidas.png" alt="Bebidas">
+
+    <div class="pizza-info">
+
+        <h2>BEBIDAS</h2>
+
+        <p>Refresque seu pedido com nossas bebidas geladinhas!</p>
+
+        <button onclick="window.location.href='bebidas.html'">
+
+            VER BEBIDAS
+
+        </button>
+
+    </div>
+
+</div>
+
+    <!-- PIZZA 35 -->
+
+    <div class="pizza-card">
+
+        <img src="imagens/pizza35.png" alt="Pizza 35cm">
+
+        <div class="pizza-info">
+
+            <h2>GIGANTE 35 CM</h2>
+
+            <p>8 fatias • Gigante no tamanho, irresistível no sabor!.</p>
+
+            <button onclick="window.location.href='catalogo35.html'">
+
+                VER PIZZAS
+
+            </button>
+
+        </div>
+
+    </div>
+
+        <!-- MINI PIZZAS -->
+
+    <div class="pizza-card">
+
+        <img src="imagens/mini.png" alt="Mini Pizzas">
+
+        <div class="pizza-info">
+ 
+            <h2>MINI PIZZAS</h2>
+
+            <p>Pizzas individuais, perfeitas para uma pessoa.</p>
+
+            <button onclick="window.location.href='mini.html'">
+
+                VER MINI PIZZAS
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <div class="pizza-card destaque">
+
+        <img src="imagens/promocao.png" alt="Promoções">
+
+        <div class="pizza-info">
+
+            <span class="tag-promo">OFERTAS</span>
+
+            <h2>PROMOÇÕES</h2>
+
+            <p>Confira nossas promoções especiais e economize no seu pedido.</p>
+
+            <button onclick="window.location.href='promocoes.html'">
+
+                VER PROMOÇÕES
+
+            </button>
+
+        </div>
+
+    </div>
+
+    
+
+</section>
+
+<footer>
+
+    <h3>Pizzaria Sabor de Casa</h3>
+
+    <p>🍕 Qualidade • Sabor • Tradição</p>
+
+    <p>WhatsApp: (38) 99160-3575</p>
+
+    <p>© 2026 - Todos os direitos reservados.</p>
+  
+    
+    <p class="acesso-administrativo"><a href="admin/" aria-label="Acessar painel administrativo">🔒 Área administrativa</a></p>
+</footer>
+
+
+<div id="carrinho" class="carrinho">
+
+    <div class="carrinho-header">
+
+        <h2>🛒 Meu Pedido</h2>
+
+        <button onclick="fecharCarrinho()">
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+    </div>
+
+    <div id="lista-carrinho" class="lista-carrinho">
+
+        <p>Seu carrinho está vazio.</p>
+
+    </div>
+
+    <div class="resumo">
+
+        <div class="linha">
+
+            <span>Total</span>
+
+            <strong id="total">R$ 0,00</strong>
+
+        </div>
+
+    </div>
+
+    <div class="dados">
+
+        <button class="btn-finalizar" onclick="finalizarPedido()">
+
+            <i class="fa-brands fa-whatsapp"></i>
+
+            Finalizar Pedido
+
+        </button>
+
+        <button class="btn-limpar" onclick="limparCarrinho()">
+
+            Limpar Carrinho
+
+        </button>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+<script src="admin-sync.js" defer></script>
+
+<script src="business-info.js" defer></script>
+</body>
+</html>

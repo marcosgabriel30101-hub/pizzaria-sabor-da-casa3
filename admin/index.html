@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><title>Painel administrativo | Sabor de Casa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./admin.css">
+</head>
+<body>
+<section id="loginView" class="login-wrap">
+ <form id="loginForm" class="login-card">
+  <div class="brand-mark">🍕</div><p class="eyebrow">SABOR DE CASA</p><h1>Painel administrativo</h1><p class="muted">Entre para gerenciar a pizzaria.</p>
+  <label>Usuário<input name="username" autocomplete="username" required value="admin"></label>
+  <label>Senha<input name="password" type="password" autocomplete="current-password" required></label>
+  <button class="primary full">Entrar no painel</button><p id="loginError" class="error" role="alert"></p>
+  <a class="back-link" href="../index.html">← Voltar para a loja</a>
+ </form>
+</section>
+<div id="appView" class="app-shell" hidden>
+ <aside class="sidebar">
+  <a class="side-brand" href="#"><span>🍕</span><b>Sabor de Casa</b></a>
+  <p class="side-caption">GERENCIAMENTO</p>
+  <button class="nav-btn active" data-view="overview">▦ <span>Visão geral</span></button>
+  <button class="nav-btn" data-view="orders">▤ <span>Pedidos</span><i id="pendingBadge"></i></button>
+  <button class="nav-btn" data-view="products">◈ <span>Produtos</span></button>
+  <button class="nav-btn" data-view="reports">▥ <span>Relatórios mensais</span></button>
+  <button class="nav-btn" data-view="settings">⚙ <span>Dados da pizzaria</span></button>
+  <div class="sidebar-bottom"><a href="../index.html" target="_blank">↗ Abrir loja</a><button id="logoutBtn">⇥ Sair</button></div>
+ </aside>
+ <main class="main-area">
+  <header class="topbar"><div><p class="eyebrow">ADMINISTRAÇÃO</p><h1 id="pageTitle">Visão geral</h1></div><div class="user-pill"><span class="online-dot"></span><span id="adminName">Admin</span></div></header>
+  <section id="overviewView" class="view">
+   <div class="welcome"><div><p class="eyebrow">BEM-VINDO DE VOLTA</p><h2>Resumo da sua pizzaria</h2><p>Acompanhe pedidos e mantenha seu cardápio atualizado.</p></div><span class="welcome-icon">🍕</span></div>
+   <div class="stats-grid">
+    <article class="stat-card"><span>Pedidos recebidos</span><strong id="statOrders">0</strong><small>Total registrado</small></article>
+    <article class="stat-card"><span>Pedidos pendentes</span><strong id="statPending">0</strong><small>Novo ou em preparo</small></article>
+    <article class="stat-card"><span>Produtos ativos</span><strong id="statProducts">0</strong><small id="statProductsSub">No catálogo</small></article>
+    <article class="stat-card"><span>Vendas registradas</span><strong id="statSales">R$ 0,00</strong><small>Pedidos não cancelados</small></article>
+   </div>
+   <div class="section-head"><div><h2>Pedidos recentes</h2><p>Últimos pedidos enviados pela loja.</p></div><button class="text-btn" data-goto="orders">Ver todos →</button></div>
+   <div id="recentOrders" class="table-card"></div>
+  </section>
+  <section id="ordersView" class="view" hidden>
+   <div class="section-head"><div><h2>Pedidos</h2><p>Pedidos finalizados pelo site e enviados ao WhatsApp.</p></div><button class="secondary" id="refreshOrders">↻ Atualizar</button></div>
+   <div id="ordersList" class="table-card"></div>
+  </section>
+  <section id="productsView" class="view" hidden>
+   <div class="section-head"><div><h2>Cardápio</h2><p>Edite preços, descrições, imagens e disponibilidade.</p></div><button class="primary" id="addProduct">＋ Novo produto</button></div>
+   <div class="filters"><input id="productSearch" placeholder="Buscar produto..." aria-label="Buscar produto"><select id="categoryFilter"><option value="">Todas as categorias</option><option value="30cm">Pizzas 30 cm</option><option value="35cm">Pizzas 35 cm</option><option value="mini">Mini pizzas</option><option value="bebidas">Bebidas</option><option value="promocoes">Promoções</option></select></div>
+   <div id="productsList" class="product-grid"></div>
+  </section>
+  <section id="reportsView" class="view" hidden>
+   <div class="section-head"><div><h2>Relatório mensal</h2><p>Vendas registradas, pedidos, produtos e despesas do mês.</p></div><button class="secondary" id="exportReport">↓ Exportar CSV</button></div>
+   <label>Mês do relatório <input type="month" id="reportMonth"></label> <button class="primary" id="loadReport">Consultar</button>
+   <div class="stats-grid" style="margin-top:20px">
+    <article class="stat-card"><span>Pedidos</span><strong id="reportOrders">0</strong></article>
+    <article class="stat-card"><span>Vendas (sem cancelados)</span><strong id="reportSales">R$ 0</strong></article>
+    <article class="stat-card"><span>Despesas</span><strong id="reportExpenses">R$ 0</strong></article>
+    <article class="stat-card"><span>Saldo estimado</span><strong id="reportBalance">R$ 0</strong></article>
+   </div>
+   <h3>Produtos vendidos</h3><div id="reportProducts" class="table-card"></div>
+   <h3>Registrar despesa</h3>
+   <form id="expenseForm" class="table-card" style="padding:16px;display:flex;gap:10px;flex-wrap:wrap;align-items:end">
+    <label>Descrição<input name="description" required placeholder="Ex.: ingredientes"></label>
+    <label>Valor (R$)<input name="amount" type="number" min="0" step="0.01" required></label>
+    <label>Data<input name="date" type="date" required></label><button class="primary">Adicionar despesa</button>
+   </form><div id="expenseList" class="table-card"></div>
+   <p class="muted">O saldo é vendas menos despesas lançadas; não representa lucro contábil. Pedidos enviados ao WhatsApp só entram no relatório quando são registrados no site.</p>
+  </section>
+  <section id="settingsView" class="view" hidden>
+   <div class="section-head"><div><h2>Dados da pizzaria</h2><p>Edite as informações exibidas aos clientes e o WhatsApp que recebe pedidos.</p></div></div>
+   <form id="settingsForm" class="table-card" style="padding:20px;max-width:720px">
+    <label>Nome da pizzaria<input name="businessName" required></label>
+    <label>WhatsApp (DDI + DDD + número, só números)<input name="whatsapp" placeholder="5538999999999" required></label>
+    <label>Endereço<input name="address"></label>
+    <label>Horário de funcionamento<input name="openingHours"></label>
+    <label>Informações de entrega<input name="deliveryInfo"></label>
+    <label>Chave Pix para informar ao cliente<input name="pixKey"></label>
+    <label>Instagram<input name="instagram"></label>
+    <button class="primary">Salvar informações</button><p id="settingsMessage" role="status"></p>
+   </form>
+  </section>
+ </main>
+</div>
+<dialog id="productDialog" class="modal">
+ <form id="productForm" method="dialog">
+  <div class="modal-head"><div><p class="eyebrow">CARDÁPIO</p><h2 id="productDialogTitle">Novo produto</h2></div><button type="button" class="icon-btn" id="closeProduct">×</button></div>
+  <input type="hidden" name="id">
+  <label>Nome do produto<input name="name" maxlength="100" required></label>
+  <label>Descrição<textarea name="description" rows="3" maxlength="500"></textarea></label>
+  <div class="form-row"><label>Preço (R$)<input name="price" type="number" min="0" step="0.01" required></label><label>Categoria<select name="category" required><option value="30cm">Pizza 30 cm</option><option value="35cm">Pizza 35 cm</option><option value="mini">Mini pizza</option><option value="bebidas">Bebidas</option><option value="promocoes">Promoções</option></select></label></div>
+  <label>Caminho da imagem<input name="image" placeholder="imagens/nome-da-pizza.png"></label>
+  <label class="check-line"><input name="active" type="checkbox" checked> Produto disponível na loja</label>
+  <p id="productError" class="error"></p><div class="modal-actions"><button type="button" class="secondary" id="cancelProduct">Cancelar</button><button class="primary" id="saveProduct">Salvar produto</button></div>
+ </form>
+</dialog>
+<script src="./admin.js"></script>
+</body></html>

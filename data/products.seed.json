@@ -1,0 +1,432 @@
+[
+  {
+    "id": "30cm-mussarela",
+    "name": "Mussarela",
+    "description": "Mussarela, molho especial e orégano.",
+    "price": 54.9,
+    "category": "30cm",
+    "image": "imagens/mussarela.png",
+    "active": true,
+    "sourcePage": "catalogo30.html"
+  },
+  {
+    "id": "30cm-toscana",
+    "name": "Toscana",
+    "description": "Mussarela, calabresa, bacon, catupiry e orégano.",
+    "price": 49.9,
+    "category": "30cm",
+    "image": "imagens/toscana.png",
+    "active": true,
+    "sourcePage": "catalogo30.html"
+  },
+  {
+    "id": "30cm-romana",
+    "name": "Romana",
+    "description": "Mussarela, presunto, milho, palmito, azeitona verde e orégano.",
+    "price": 49.9,
+    "category": "30cm",
+    "image": "imagens/romana.png",
+    "active": true,
+    "sourcePage": "catalogo30.html"
+  },
+  {
+    "id": "30cm-italiana",
+    "name": "Italiana",
+    "description": "Mussarela, calabresa, milho, tomate, pimentão e azeitona.",
+    "price": 49.9,
+    "category": "30cm",
+    "image": "imagens/italiana.png",
+    "active": true,
+    "sourcePage": "catalogo30.html"
+  },
+  {
+    "id": "30cm-quatro-queijos",
+    "name": "Quatro Queijos",
+    "description": "Mussarela, parmesão, provolone, catupiry e orégano.",
+    "price": 56.9,
+    "category": "30cm",
+    "image": "imagens/quatro-queijos.png",
+    "active": true,
+    "sourcePage": "catalogo30.html"
+  },
+  {
+    "id": "30cm-portuguesa",
+    "name": "Portuguesa",
+    "description": "Mussarela, presunto, bacon, ovo, cebola, pimentão, azeitona e orégano.",
+    "price": 49.9,
+    "category": "30cm",
+    "image": "imagens/portuguesa.png",
+    "active": true,
+    "sourcePage": "catalogo30.html"
+  },
+  {
+    "id": "30cm-siciliana",
+    "name": "Siciliana",
+    "description": "Mussarela, presunto, atum, catupiry, tomate, azeitona preta e orégano.",
+    "price": 49.9,
+    "category": "30cm",
+    "image": "imagens/siciliana.png",
+    "active": true,
+    "sourcePage": "catalogo30.html"
+  },
+  {
+    "id": "30cm-atum",
+    "name": "Atum",
+    "description": "Atum, mussarela, tomate e orégano.",
+    "price": 49.9,
+    "category": "30cm",
+    "image": "imagens/atum.png",
+    "active": true,
+    "sourcePage": "catalogo30.html"
+  },
+  {
+    "id": "30cm-napolitana",
+    "name": "Napolitana",
+    "description": "Mussarela, presunto, tomate e orégano.",
+    "price": 49.9,
+    "category": "30cm",
+    "image": "imagens/napolitana.png",
+    "active": true,
+    "sourcePage": "catalogo30.html"
+  },
+  {
+    "id": "30cm-especial-da-casa",
+    "name": "Especial da Casa",
+    "description": "Mussarela, presunto, bacon, frango, ovo, palmito, milho, cebola, azeitona preta, tomate, calabresa e orégano.",
+    "price": 54.9,
+    "category": "30cm",
+    "image": "imagens/especial.png",
+    "active": true,
+    "sourcePage": "catalogo30.html"
+  },
+  {
+    "id": "30cm-frango-com-catupiry",
+    "name": "Frango com Catupiry",
+    "description": "Frango desfiado, catupiry, mussarela e orégano.",
+    "price": 49.9,
+    "category": "30cm",
+    "image": "imagens/frango.png",
+    "active": true,
+    "sourcePage": "catalogo30.html"
+  },
+  {
+    "id": "30cm-romeu-e-julieta",
+    "name": "Romeu e Julieta",
+    "description": "Mussarela, goiabada e orégano.",
+    "price": 49.9,
+    "category": "30cm",
+    "image": "imagens/romeu-julieta.png",
+    "active": true,
+    "sourcePage": "catalogo30.html"
+  },
+  {
+    "id": "30cm-brigadeiro",
+    "name": "Brigadeiro",
+    "description": "Chocolate, leite condensado, granulado e creme de leite.",
+    "price": 49.9,
+    "category": "30cm",
+    "image": "imagens/brigadeiro.png",
+    "active": true,
+    "sourcePage": "catalogo30.html"
+  },
+  {
+    "id": "35cm-mussarela",
+    "name": "Mussarela",
+    "description": "Mussarela, molho especial e orégano.",
+    "price": 59.9,
+    "category": "35cm",
+    "image": "imagens/mussarela.png",
+    "active": true,
+    "sourcePage": "catalogo35.html"
+  },
+  {
+    "id": "35cm-toscana",
+    "name": "Toscana",
+    "description": "Mussarela, calabresa, bacon, catupiry e orégano.",
+    "price": 54.9,
+    "category": "35cm",
+    "image": "imagens/toscana.png",
+    "active": true,
+    "sourcePage": "catalogo35.html"
+  },
+  {
+    "id": "35cm-romana",
+    "name": "Romana",
+    "description": "Mussarela, presunto, milho, palmito, azeitona verde e orégano.",
+    "price": 54.9,
+    "category": "35cm",
+    "image": "imagens/romana.png",
+    "active": true,
+    "sourcePage": "catalogo35.html"
+  },
+  {
+    "id": "35cm-italiana",
+    "name": "Italiana",
+    "description": "Mussarela, calabresa, milho, tomate, pimentão e azeitona.",
+    "price": 54.9,
+    "category": "35cm",
+    "image": "imagens/italiana.png",
+    "active": true,
+    "sourcePage": "catalogo35.html"
+  },
+  {
+    "id": "35cm-quatro-queijos",
+    "name": "Quatro Queijos",
+    "description": "Mussarela, parmesão, provolone, catupiry e orégano.",
+    "price": 61.9,
+    "category": "35cm",
+    "image": "imagens/quatro-queijos.png",
+    "active": true,
+    "sourcePage": "catalogo35.html"
+  },
+  {
+    "id": "35cm-portuguesa",
+    "name": "Portuguesa",
+    "description": "Mussarela, presunto, bacon, ovo, cebola, pimentão, azeitona e orégano.",
+    "price": 54.9,
+    "category": "35cm",
+    "image": "imagens/portuguesa.png",
+    "active": true,
+    "sourcePage": "catalogo35.html"
+  },
+  {
+    "id": "35cm-siciliana",
+    "name": "Siciliana",
+    "description": "Mussarela, presunto, atum, catupiry, tomate, azeitona preta e orégano.",
+    "price": 54.9,
+    "category": "35cm",
+    "image": "imagens/siciliana.png",
+    "active": true,
+    "sourcePage": "catalogo35.html"
+  },
+  {
+    "id": "35cm-atum",
+    "name": "Atum",
+    "description": "Atum, mussarela, tomate e orégano.",
+    "price": 54.9,
+    "category": "35cm",
+    "image": "imagens/atum.png",
+    "active": true,
+    "sourcePage": "catalogo35.html"
+  },
+  {
+    "id": "35cm-napolitana",
+    "name": "Napolitana",
+    "description": "Mussarela, presunto, tomate e orégano.",
+    "price": 54.9,
+    "category": "35cm",
+    "image": "imagens/napolitana.png",
+    "active": true,
+    "sourcePage": "catalogo35.html"
+  },
+  {
+    "id": "35cm-especial-da-casa",
+    "name": "Especial da Casa",
+    "description": "Mussarela, presunto, bacon, frango, ovo, palmito, milho, cebola, azeitona preta, tomate, calabresa e orégano.",
+    "price": 59.9,
+    "category": "35cm",
+    "image": "imagens/especial.png",
+    "active": true,
+    "sourcePage": "catalogo35.html"
+  },
+  {
+    "id": "35cm-frango-com-catupiry",
+    "name": "Frango com Catupiry",
+    "description": "Frango desfiado, catupiry, mussarela e orégano.",
+    "price": 54.9,
+    "category": "35cm",
+    "image": "imagens/frango.png",
+    "active": true,
+    "sourcePage": "catalogo35.html"
+  },
+  {
+    "id": "35cm-romeu-e-julieta",
+    "name": "Romeu e Julieta",
+    "description": "Mussarela, goiabada e orégano.",
+    "price": 54.9,
+    "category": "35cm",
+    "image": "imagens/romeu-julieta.png",
+    "active": true,
+    "sourcePage": "catalogo35.html"
+  },
+  {
+    "id": "35cm-brigadeiro",
+    "name": "Brigadeiro",
+    "description": "Chocolate, leite condensado, granulado e creme de leite.",
+    "price": 54.9,
+    "category": "35cm",
+    "image": "imagens/brigadeiro.png",
+    "active": true,
+    "sourcePage": "catalogo35.html"
+  },
+  {
+    "id": "mini-calabresa",
+    "name": "Calabresa",
+    "description": "Molho, mussarela, calabresa, cebola e orégano.",
+    "price": 5.0,
+    "category": "mini",
+    "image": "imagens/calabresa-mini.png",
+    "active": true,
+    "sourcePage": "mini.html"
+  },
+  {
+    "id": "mini-frango",
+    "name": "Frango",
+    "description": "Molho, mussarela, frango desfiado, Catupiry e orégano.",
+    "price": 5.0,
+    "category": "mini",
+    "image": "imagens/frango-mini.png",
+    "active": true,
+    "sourcePage": "mini.html"
+  },
+  {
+    "id": "mini-a-moda",
+    "name": "À Moda",
+    "description": "Molho, mussarela, presunto, calabresa, milho e tomate.",
+    "price": 5.0,
+    "category": "mini",
+    "image": "imagens/moda-mini.png",
+    "active": true,
+    "sourcePage": "mini.html"
+  },
+  {
+    "id": "mini-romeu-e-julieta",
+    "name": "Romeu e Julieta",
+    "description": "Mussarela, goiabada, leite condensado e creme de leite.",
+    "price": 5.0,
+    "category": "mini",
+    "image": "imagens/moda-romeu.png",
+    "active": true,
+    "sourcePage": "mini.html"
+  },
+  {
+    "id": "mini-brigadeiro",
+    "name": "Brigadeiro",
+    "description": "Chocolate, leite condensado, granulado e creme de leite.",
+    "price": 5.0,
+    "category": "mini",
+    "image": "imagens/moda-brigadeiro.png",
+    "active": true,
+    "sourcePage": "mini.html"
+  },
+  {
+    "id": "mini-banana-com-canela",
+    "name": "Banana com canela",
+    "description": "Mussarela, banana, canela, leite condensado, creme de leite e açúcar.",
+    "price": 5.0,
+    "category": "mini",
+    "image": "imagens/moda-canela.png",
+    "active": true,
+    "sourcePage": "mini.html"
+  },
+  {
+    "id": "mini-napolitana",
+    "name": "Napolitana",
+    "description": "Molho, mussarela, tomate, parmesão e orégano.",
+    "price": 5.0,
+    "category": "mini",
+    "image": "imagens/napolitana-mini.png",
+    "active": true,
+    "sourcePage": "mini.html"
+  },
+  {
+    "id": "mini-presunto",
+    "name": "Presunto",
+    "description": "Molho, mussarela, presunto e orégano.",
+    "price": 5.0,
+    "category": "mini",
+    "image": "imagens/presunto-mini.png",
+    "active": true,
+    "sourcePage": "mini.html"
+  },
+  {
+    "id": "bebidas-coca-cola-2l",
+    "name": "Coca-Cola 2L",
+    "description": "Refrigerante Coca-Cola 2 litros.",
+    "price": 13.0,
+    "category": "bebidas",
+    "image": "imagens/coca.png",
+    "active": true,
+    "sourcePage": "bebidas.html"
+  },
+  {
+    "id": "bebidas-fanta-laranja-2l",
+    "name": "Fanta Laranja 2L",
+    "description": "Fanta Laranja 2 litros, sabor refrescante.",
+    "price": 10.0,
+    "category": "bebidas",
+    "image": "imagens/fanta.png",
+    "active": true,
+    "sourcePage": "bebidas.html"
+  },
+  {
+    "id": "bebidas-sukita-laranja-2l",
+    "name": "Sukita Laranja 2L",
+    "description": "Sukita Laranja 2 litros.",
+    "price": 9.0,
+    "category": "bebidas",
+    "image": "imagens/sukita.png",
+    "active": true,
+    "sourcePage": "bebidas.html"
+  },
+  {
+    "id": "bebidas-kuat-2l",
+    "name": "Kuat 2L",
+    "description": "Refrigerante Kuat 2 litros.",
+    "price": 9.0,
+    "category": "bebidas",
+    "image": "imagens/kuat.png",
+    "active": true,
+    "sourcePage": "bebidas.html"
+  },
+  {
+    "id": "promocoes-a-moda",
+    "name": "A Moda",
+    "description": "Molho, mussarela, presunto, calabresa, tomate, milho, azeitona e orégano.",
+    "price": 49.9,
+    "category": "promocoes",
+    "image": "imagens/moda.png",
+    "active": true,
+    "sourcePage": "promocoes.html"
+  },
+  {
+    "id": "promocoes-presunto",
+    "name": "Presunto",
+    "description": "Mussarela, presunto e orégano.",
+    "price": 49.9,
+    "category": "promocoes",
+    "image": "imagens/presunto.png",
+    "active": true,
+    "sourcePage": "promocoes.html"
+  },
+  {
+    "id": "promocoes-caipira",
+    "name": "Caipira",
+    "description": "Mussarela, milho, frango, calabresa e orégano.",
+    "price": 49.9,
+    "category": "promocoes",
+    "image": "imagens/caipira.png",
+    "active": true,
+    "sourcePage": "promocoes.html"
+  },
+  {
+    "id": "promocoes-calabresa",
+    "name": "Calabresa",
+    "description": "Mussarela, calabresa e orégano.",
+    "price": 49.9,
+    "category": "promocoes",
+    "image": "imagens/calabresa.png",
+    "active": true,
+    "sourcePage": "promocoes.html"
+  },
+  {
+    "id": "promocoes-banana-com-canela",
+    "name": "Banana com canela",
+    "description": "Mussarela, banana, canela, leite condensado, creme de leite e açúcar.",
+    "price": 49.9,
+    "category": "promocoes",
+    "image": "imagens/banana.png",
+    "active": true,
+    "sourcePage": "promocoes.html"
+  }
+]
